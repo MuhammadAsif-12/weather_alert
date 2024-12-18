@@ -1,6 +1,7 @@
 import 'package:weather_home_screen/constant/usecase/usecase.dart';
 import 'package:weather_home_screen/core/resource/data_state.dart';
 import 'package:weather_home_screen/features/home_page/domain/entities/entity_weather_data.dart';
+import 'package:weather_home_screen/features/home_page/domain/entities/locality_entity.dart';
 import 'package:weather_home_screen/features/home_page/domain/repository/weather_bylatlong_repo.dart';
 
 // Use Case
@@ -24,9 +25,11 @@ class RequestByLatLong {
   final String lat;
   final String long;
 
-  RequestByLatLong({required this.lat, required this.long});
+  EntityLocality? locality;
 
-  Map<String, dynamic?> toJson() {
-    return {'lat': lat, 'long': long};
+  RequestByLatLong({required this.lat, required this.long, this.locality});
+
+  Map<String, dynamic> toJson() {
+    return {'lat': lat, 'long': long, 'locality': locality?.toJson()};
   }
 }

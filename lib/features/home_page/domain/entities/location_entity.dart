@@ -1,14 +1,14 @@
 import 'package:equatable/equatable.dart';
 
 class EntityLocation extends Equatable {
-  String? locAddress;
-  String? locationTitle;
-  String? temp;
-  String? highTemp;
-  String? lowTemp;
-  String? feelsLike;
+ final String? locAddress;
+ final String? locationTitle;
+ final String? temp;
+ final String? highTemp;
+ final String? lowTemp;
+ final String? feelsLike;
 
-  EntityLocation({
+const  EntityLocation({
      this.locAddress,
      this.locationTitle,
      this.temp,
