@@ -1,7 +1,7 @@
 import 'package:weather_home_screen/core/resource/data_state.dart';
 import 'package:weather_home_screen/features/home_page/data/api_service/data_source/weather_api_services.dart';
 import 'package:weather_home_screen/features/home_page/data/models/by_lat_long_model.dart';
-import 'package:weather_home_screen/features/home_page/domain/repository/get_weather_bylatlong_repo.dart';
+import 'package:weather_home_screen/features/home_page/domain/repository/weather_bylatlong_repo.dart';
 
 class GetWeatherBylatlongRepoImpl implements GetWeatherBylatlongRepo {
 

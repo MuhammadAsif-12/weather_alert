@@ -18,10 +18,8 @@ class EntityLocality extends Equatable {
     return {'city': city, 'address': address};
   }
 
-  factory EntityLocality.fromJson(Map<String, dynamic>? map){
+  factory EntityLocality.fromJson(Map<String, dynamic>? map) {
     return EntityLocality(
-      city: map?["city"] ?? "",
-      address: map?["address"] ?? ""
-    );
+        city: map?["city"] ?? "", address: map?["address"] ?? "");
   }
 }
