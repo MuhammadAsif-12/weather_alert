@@ -2,7 +2,7 @@ import 'package:weather_home_screen/constant/usecase/usecase.dart';
 import 'package:weather_home_screen/core/resource/data_state.dart';
 import 'package:weather_home_screen/features/home_page/domain/entities/entity_weather_data.dart';
 import 'package:weather_home_screen/features/home_page/domain/entities/locality_entity.dart';
-import 'package:weather_home_screen/features/home_page/domain/repository/weather_bylatlong_repo.dart';
+import 'package:weather_home_screen/features/home_page/domain/repository/get_weather_bylatlong_repo.dart';
 
 // Use Case
 class GetWeatherByLatLongUseCase

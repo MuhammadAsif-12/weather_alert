@@ -9,7 +9,9 @@ part 'weather_api_services.g.dart';
 
 @RestApi(baseUrl: weatherServerBaseURL)
 abstract class WeatherApiService {
-  factory WeatherApiService(Dio dio, {String baseUrl}) = _WeatherApiService;
+  factory WeatherApiService(Dio dio) {
+    return _WeatherApiService(dio);
+  }
 
   @POST("weatherInternal/byLatLong")
   Future<HttpResponse<ApiResponse<EntityWeatherData>>> getWeatherByLatLong(
