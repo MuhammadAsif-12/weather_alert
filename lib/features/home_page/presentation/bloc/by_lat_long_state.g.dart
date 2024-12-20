@@ -9,6 +9,10 @@ part of 'by_lat_long_state.dart';
 abstract class _$ByLatLongStateCWProxy {
   ByLatLongState locationsList(List<EntityWeatherData> locationsList);
 
+  ByLatLongState apiState(ApiState<bool> apiState);
+
+  ByLatLongState locationStatus(LocationStatus? locationStatus);
+
   /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ByLatLongState(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
   ///
   /// Usage
@@ -17,6 +21,8 @@ abstract class _$ByLatLongStateCWProxy {
   /// ````
   ByLatLongState call({
     List<EntityWeatherData> locationsList,
+    ApiState<bool> apiState,
+    LocationStatus? locationStatus,
   });
 }
 
@@ -31,6 +37,13 @@ class _$ByLatLongStateCWProxyImpl implements _$ByLatLongStateCWProxy {
       this(locationsList: locationsList);
 
   @override
+  ByLatLongState apiState(ApiState<bool> apiState) => this(apiState: apiState);
+
+  @override
+  ByLatLongState locationStatus(LocationStatus? locationStatus) =>
+      this(locationStatus: locationStatus);
+
+  @override
 
   /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ByLatLongState(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
   ///
@@ -40,12 +53,22 @@ class _$ByLatLongStateCWProxyImpl implements _$ByLatLongStateCWProxy {
   /// ````
   ByLatLongState call({
     Object? locationsList = const $CopyWithPlaceholder(),
+    Object? apiState = const $CopyWithPlaceholder(),
+    Object? locationStatus = const $CopyWithPlaceholder(),
   }) {
     return ByLatLongState(
       locationsList: locationsList == const $CopyWithPlaceholder()
           ? _value.locationsList
           // ignore: cast_nullable_to_non_nullable
           : locationsList as List<EntityWeatherData>,
+      apiState: apiState == const $CopyWithPlaceholder()
+          ? _value.apiState
+          // ignore: cast_nullable_to_non_nullable
+          : apiState as ApiState<bool>,
+      locationStatus: locationStatus == const $CopyWithPlaceholder()
+          ? _value.locationStatus
+          // ignore: cast_nullable_to_non_nullable
+          : locationStatus as LocationStatus?,
     );
   }
 }

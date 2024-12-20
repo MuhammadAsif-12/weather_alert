@@ -18,6 +18,11 @@ class GetByLatLongEvent extends EventByLatLong {
 class GetWeatherForLocation extends EventByLatLong {
   EntityLocality? locality;
   bool? isLocationEnable;
+  int index;
 
-  GetWeatherForLocation({this.isLocationEnable});
+  GetWeatherForLocation({this.isLocationEnable, required this.index});
+}
+
+class ByLatLngInitialEvent extends EventByLatLong {
+  ByLatLngInitialEvent();
 }
